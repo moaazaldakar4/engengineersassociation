@@ -63,13 +63,19 @@ ScrollReveal().reveal('.home-content h1, .about-image , ', { origin: 'left' });
 ScrollReveal().reveal('.about-content p, .about-content, .about-content h3', { origin: 'right' });
 
 /* ==========================typed js========================== */
-const typed = new Typed('.multi-text', {
-  strings: ['دائماً نجعل المستحيل ممكناً ','Every Time We Make The Impossible Possible'],
-  typeSpeed: 150,
-  backDelay: 2000,
-  backSpeed: 100,
-  loop:true
+document.addEventListener('DOMContentLoaded', function () {
+  const typed = new Typed('.multi-text', {
+    strings: [
+      'دائماً نجعل المستحيل ممكناً',
+      'Every Time We Make The Impossible Possible'
+    ],
+    typeSpeed: 150,
+    backDelay: 2000,
+    backSpeed: 100,
+    loop: true
+  });
 });
+
 
 
 
