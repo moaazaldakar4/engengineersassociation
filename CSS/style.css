@@ -124,7 +124,7 @@ section{
         .bubble {
             position: relative;
             width: 1px;
-            height: 25px;
+            height: 15px;
             background: #0ef;
             border-radius: 50%;
             margin: 0 1px;
