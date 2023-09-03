@@ -1,0 +1,810 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@200;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Courgette:wght@200;400;500;700&display=swap');
+
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    text-decoration: none;
+    border: none;
+    outline:none;
+    scroll-behavior: smooth;
+    
+}
+* {
+    font-family: 'Rubik', sans-serif;
+
+}
+.english-text{
+    font-family: 'Courgette', sans-serif;
+}
+
+:root {
+    --bg-color: #1f242d;
+    --second-bg-color:#323946;
+    --text-color:#fff;
+    --main-color:#279EFF;
+
+}
+html{
+    font-size: 75%;
+    overflow-x:hidden;
+    
+
+}
+body{
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(90deg, #5f004f,  rgb(0, 0, 115)50%, #EC53B0); /* Updated colors */
+    color: var(--text-color);
+    background-size: 300% 300%;
+    animation: color 10s ease-in-out infinite;
+
+}
+@keyframes color {
+    0%{
+        background-position: 0% 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
+}
+
+section{
+    min-height: 100vh;
+    padding: 10rem 9% 2rem;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 0.5rem 8%;
+    background: rgba(0, 0, 0, 0); /* Fallback color for browsers that don't support backdrop-filter */
+    backdrop-filter: blur(10px); /* Apply the blur effect */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+  
+
+}
+.header .sticky{
+    border-bottom: 0.1rem solid rgba(0,0,0,0.2);
+}
+.logo{
+    font-size: 3rem;
+    color: var(--text-color);
+    font-weight: 600;
+    cursor: default;
+    cursor: pointer; /* Change to pointer to indicate interactivity */
+    margin-right: auto;
+
+}
+.navbar{
+    margin-right: -5rem;
+}
+.bubbles{
+    position: relative;
+    display: flex;
+}
+.bubble{
+        position: relative;
+        width: 1px;
+        height: 25px;
+        background: #0ef;
+        border-radius: 50%;
+        margin: 0 4px;
+        box-shadow: 0 0 0 1px #4fc3dc44,
+        0 0 4px #0ef , 
+        0 0 13px #0ef;
+        animation: animate 50s linear infinite;
+        animation-duration: calc(500s/var(--i));
+    }
+    @keyframes animate {
+        0%{
+            transform: translateY(-10vh) scale(3);
+        }
+        100%{
+            transform: translateY(660vh) scale(0);
+        }
+    }
+    .bubble:nth-child(even){
+        background: #ff2d75;
+        box-shadow: 0 0 0 1px #ff2d7544,
+        0 0 4px #ff2d75 , 
+        0 0 13px #ff2d75;
+    }
+    @media (max-width: 768px) {
+        .bubble {
+            position: relative;
+            width: 1px;
+            height: 25px;
+            background: #0ef;
+            border-radius: 50%;
+            margin: 0 1px;
+            box-shadow: 0 0 0 1px #4fc3dc44,
+            0 0 4px #0ef , 
+            0 0 13px #0ef;
+            animation: animate 50s linear infinite;
+            animation-duration: calc(500s/var(--i));
+        }
+        
+        /* Additional responsive styles for even bubbles */
+        .bubble:nth-child(even) {
+            box-shadow: 0 0 0 1px #ff2d7544,
+            0 0 4px #ff2d75 , 
+            0 0 13px #ff2d75;
+        }
+        
+    }
+.navbar a {
+    font-size: 1.5rem;
+    color: var(--text-color);
+    margin-left: 1.5rem;
+    margin-top: 0.5rem;
+    transition: 0.3s;
+    font-weight: bold;
+}
+.navbar a:hover,
+.navbar a .active{
+background: linear-gradient(90deg,#0ef, #C4B0FF);
+-webkit-background-clip: text;
+color: transparent;
+
+}
+.nav-pic a img {
+    width: 95px;
+    height: 95px;
+    border: none;
+    border-radius: 50%;
+    margin-left: -100px;
+    margin-top: 7px;
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    line-height: 100px;
+    transition: transform 0.5s ease, box-shadow 0.3s ease ,background-color 0.7s ease,border-radius 0.7s ease ,width 1s ease ,height 1s ease;
+    transform-origin: center center;
+}
+
+.nav-pic a img:hover {
+    transform: scale(1.3) translateY(10px) translateX(10px);
+    box-shadow: 0 0.5rem 0.5rem rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    border-radius: 40%;
+}
+
+
+#menu-icon{
+    font-size: 3.3rem;
+    color: var(--text-color);
+    display: none;
+}
+
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    direction: rtl; /* Set the text direction to right-to-left */
+}
+
+.home-image img {
+    animation: floatImage 4s ease-in-out infinite;
+    width: 150px;
+    /* Add the following line to place the image on the left */
+    margin-right: 20px;
+    margin-left: -500rem;
+
+
+}
+
+@keyframes floatImage {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-3rem);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Global styles or variables */
+
+/* Styling for the home content */
+.home-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+}
+
+
+
+/* Style for h1 */
+.home-content h1 {
+    font-size: 10.5rem;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    
+}
+
+/* Style for h3 */
+.home-content h3 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+
+
+}
+
+/* Style for p */
+.home-content p {
+    font-size: 4rem;
+    margin-bottom: 2rem;
+}
+
+/* Additional styles for social media links */
+.social-media {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    margin-top: 3rem;
+    
+}
+
+.social-media a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 6rem;
+    height: 6rem;
+    background: #ffffff30;
+    border: 0.3rem inset #fff;
+    border-radius:0%;
+    font-size: 4rem;
+    box-shadow: 0 0 1rem #000;
+    color: #fff;
+    transition: 0.4s ease-in-out;
+    text-shadow:0 0 2rem #000 ;
+    margin-right:1.5rem ;
+    margin-left:1.5rem ;
+
+}
+
+
+
+.social-media a:hover {
+    background: #fff;
+    color: #000;
+    box-shadow: 0 0 10rem #fff;
+    border: 0.3rem outset #fff;
+    transform: scale(1.4) translate(5px, -10px);
+    margin-right:5rem ;
+    margin-left:5rem ;
+}
+
+
+/* Style for the icon container */
+.icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 5rem;
+    height: 5rem;
+margin-top:3rem;
+    bottom: 2rem;
+    right: 2rem;
+}
+
+/* Style for the icon */
+.icon-container i {
+    font-size: 2rem;
+    background: linear-gradient(90deg,#0ef, #C4B0FF);
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: scaleAnimation 1s infinite alternate;    
+    transition:4s  ;
+}
+
+
+/* Animation */
+@keyframes scaleAnimation {
+    0% {
+        transform: scale(2);
+    }
+    100% {
+        transform: scale(4);
+    }
+    
+}
+
+
+span {
+    color:#ffffff;
+}
+
+.btn{
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background: #00000041;
+    border-radius: 2.5rem;
+    border-style:ridge;
+    box-shadow: none;
+    font-size: 2rem;
+    color: #ffffff; 
+    font-weight:600;
+    transition: 0.3s ease;
+    margin: 2rem 1.5rem 2rem 0;
+}
+
+
+.btn:hover{
+    box-shadow: 0.5rem 1rem 1rem #000;
+    background: #000;
+    border-radius: 1rem;
+    font-size: 2.2rem;
+}
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+
+    direction: rtl; /* Set the text direction to right-to-left */
+}
+
+.about-image img {
+    width: 500px;
+    margin-left: 20px;
+}
+
+.heading {
+    text-align: center;
+    font-size: 4.5rem;
+}
+
+.about-content {
+    /* Set the text direction to right-to-left */
+    direction: rtl;
+}
+
+.about-content h2 {
+    text-align: right; /* Align the h2 text to the right */
+    line-height: 1.2;
+    margin-bottom: 4rem;
+    font-size: 5rem; /* You can adjust the font size as needed */
+}
+
+.about-content h3 {
+    font-size: 2.6rem;
+    margin-top: 2rem;
+    text-align: right; /* Align the h3 text to the right */
+}
+
+.about-content p {
+    text-align: right; /* Align the paragraphs text to the right */
+    font-size: 1.7rem;
+}
+.services h2 {
+    margin-bottom: 5rem;
+}
+
+.services-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap-reverse;
+    gap: 3rem;
+}
+
+.services-container .services-box {
+    flex: 1 1 calc(50% - 2rem);
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    padding: 3rem 2rem 4rem;
+    border-radius: 5rem;
+    text-align: center;
+    border: 0.2rem solid var(--bg-color);
+    transition: transform 0.7s ease, box-shadow 1s ease-in-out, flex 2s ease-in-out, border-color 1s ease-in-out, background 1s ease-in-out; /* Adjusted transition */
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.338);
+    position: relative;
+}
+
+.services-container .services-box:hover {
+    border-color: #0d00ff;
+    transform: scale(1.1);    box-shadow: 0 1rem 2rem rgb(0, 0, 0), 0 0.5rem 1rem rgba(0, 0, 0, 0.3); /* Adjusted box-shadow */
+    background: rgba(0, 0, 0, 0.784);
+}
+
+
+.services-box i {
+    font-size: 7rem;
+    color: #fff;
+}
+
+.services-box h3 {
+    font-size: 2.5rem;
+}
+
+.services-box p {
+    font-size: 0rem;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.services-box:hover p {
+    opacity: 1;
+    font-size: 1.5rem;
+    margin-top:  1rem;
+    
+}
+
+.portfolio h2 {
+    margin-bottom: 4rem;
+}
+.portfolio-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2.5rem;
+    margin-bottom: 5rem;
+}
+.portfolio-box {
+    flex: 0 0 calc(33.33% - 2.5rem);
+}
+.portfolio-container .portfolio-box{
+    position: relative;
+    border-radius: 1rem;
+    box-shadow: 0 0 5rem var(--bg-color);
+    overflow: hidden;
+    display: flex;
+    
+}
+.portfolio-box img {
+    width: 100%;
+    transition: 0.5s ease;
+        
+}
+.portfolio-box:hover img{
+transform: scale(1.1);
+box-shadow: 0 0 3rem var(--bg-color);
+
+}
+.portfolio-box .portfolio-layer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0,0,0,0.1), var(--bg-color)  );
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 4rem;
+    transform: translateY(100%);
+    transition: 0.5s ease;
+}
+.portfolio-box:hover .portfolio-layer{
+    transform: translateY(0);
+
+}
+
+.portfolio-layer h4{
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+.portfolio-layer p {
+    font-size: 2rem;
+    font-weight: 5rem;
+    margin: 0.3rem 0 1rem;
+}
+.portfolio-layer a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background: linear-gradient(90deg,#0ef, #C4B0FF);
+    border-radius: 20%;
+}
+.portfolio-layer a i {
+    font-size: 2rem;
+    color:#000000;
+}
+
+.footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: warp;
+    padding: 2rem 9%;
+    background: #00000089;
+    backdrop-filter: blur(1px);
+}
+.footer-text p {
+    font-size: 1.6rem;
+
+}
+.footer-text a {
+   color: #fff;
+font-weight: 1000;
+font-size: 2rem;
+
+
+}
+.footer-icontop a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.8rem;
+    background: linear-gradient(90deg,#0ef, #C4B0FF);
+    border-radius: 0.8rem;
+}
+.footer-icontop a i {
+    font-size: 2.4rem;
+    color: var(--second-bg-color);
+    transition: 0.5s ease;
+}
+.footer-icontop a i:hover {
+    transform: translateY(-0.2rem) scale(1.4);
+box-shadow: 0 0 5rem var(--main-color);
+
+}
+
+.partners h2 {
+    margin-bottom: 6rem;
+}
+.part-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2.5rem;
+    margin-bottom: 0rem;
+}
+.part-box {
+    flex: 0 0 calc(25% - 2.5rem);
+    
+}
+.part-container .part-box{
+    position: relative;
+    border-radius: 50%;
+    box-shadow: 0 0 5rem var(--bg-color);
+    overflow: hidden;
+    display: flex;
+    box-shadow: 0 0.5rem 0.5rem rgb(0, 0, 0);   
+    
+}
+.part-box img {
+    width: 100%;
+    transition: 0.3s ease;
+    transform: scale(1.03);
+}
+.part-box:hover img{
+transform: scale(1.1);
+}
+
+
+
+
+
+.part-layer h4{
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+.part-layer p {
+    font-size: 2rem;
+    font-weight: 5rem;
+    margin: 0.3rem 0 1rem;
+}
+.part-layer a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background: linear-gradient(90deg,#0ef, #C4B0FF);
+    border-radius: 50%;
+}
+.part-layer a i {
+    font-size: 2.5rem;
+    color:#000000;
+}
+
+
+/*breackpoints */
+@media (max-width : 1200px){
+    html{
+        font-size: 55%;
+    }
+}
+@media (max-width: 991px){
+    .header{
+        padding: 2rem 3%;
+    }
+    section {
+        padding: 10rem 3% 2rem;
+    }
+    .services {
+        padding-bottom: 7rem;
+    }
+    .portfolio{
+        padding-bottom: 7rem;
+    .footer{
+        padding: 2rem 3%;
+    }
+}
+@media (max-width:768px){
+    #menu-icon{
+        display: block;
+    }
+    .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem 3%;
+        background: #000000ac;
+        backdrop-filter:blur(10px) ;
+        border-top: 1rem solid rgba(0, 0, 0, 0.271);
+        box-shadow: rgba(0, 0, 0, 0);
+        display: none;
+    }
+    .navbar.active{
+        display: block;
+    }
+
+    
+    .navbar a {
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+    }
+    .home{
+        flex-direction: column;
+    }
+    .home-content h3{
+        font-size: 2.6rem;
+    }
+    .home-content h1{
+        font-size: 8rem;
+    }
+
+    .about {
+        flex-direction: column-reverse;
+
+    }
+
+
+    .portfolio h2 {
+        margin-bottom: 1rem;
+    }
+    .portfolio-container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+@media (max-width:617px){
+    .portfolio-container{
+        grid-template-columns: 1fr;
+    }
+}
+@media (max-width: 768px) {
+    .services-container .services-box {
+        flex: 1 1 calc(100% - 2rem); /* one box in a row on smaller screens */
+    }
+}
+.nav-pic a img:hover {
+    transform: scale(1.3) translateY(10px) translateX(-10px);
+    box-shadow: 0 0.5rem 0.5rem rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    border-radius: 20%;
+}
+
+
+.heading a {
+display: inline-block;
+margin-top: 1rem;
+text-decoration: none;
+color: var(--main-color);
+font-weight: 700;
+}
+
+@media (max-width: 450px){
+    html {
+    font-size: 50%;
+        
+    }
+    .contact form .input-box input {
+        width: 100%;
+    }
+}
+
+}
+@media (max-width:365px){
+    .home-image img{
+        width: 90vw;
+    }
+
+    .footer{
+        flex-direction: column-reverse;
+    }
+    .footer p{
+        text-align: center;
+        margin-top: 2rem;
+    }
+}
+
+}
+.about-image img {
+    width: 500px; /* Default width */
+}
+
+@media (max-width: 1200px) {
+    .about-image img {
+        width: 400px; /* Adjust the width for screens up to 1200px */
+    }
+}
+@media (max-width: 768px) {
+    .nav-pic a img {
+        width: 90px;
+        height: 90px;
+        background-size: 130% 130%;
+        margin-right: 20rem;
+    }
+}
+
+
+
+@media (max-width: 991px) {
+    .about-image img {
+        width: 300px; /* Adjust the width for screens up to 991px */
+    }
+}
+
+@media (max-width: 768px) {
+    .about-image img {
+        width: 70vw; /* Adjust the width to 70% of the viewport width for screens up to 768px */
+        margin-top: 4rem;
+    }
+}
+
+@media (max-width: 617px) {
+    .about-image img {
+        width: 90vw; /* Adjust the width to 90% of the viewport width for screens up to 617px */
+        margin-top: 2rem;
+    }
+}
+
+@media (max-width: 450px) {
+    .about-image img {
+        width: 80vw; /* Adjust the width to 80% of the viewport width for screens up to 450px */
+    }
+}
+
+@media (max-width: 365px) {
+    .about-image img {
+        width: 30px; /* Adjust the width for screens up to 365px */
+    }
+}
+@media screen and (max-width: 768px) {
+    .part-box {
+        flex: 0 0 calc(50% - 2.5rem); /* Adjust as needed for smaller screens */
+    }
+    .part-box .part-layer {
+        padding: 0 2rem; /* Adjust padding for smaller screens */
+    }
+}
