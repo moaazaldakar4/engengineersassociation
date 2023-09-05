@@ -123,7 +123,7 @@ section{
     @media (max-width: 768px) {
         .bubble {
             position: relative;
-            width: 2px;
+            width: 4.5px;
             height: 6px;
             background: #0ef;
             border-radius: 50%;
