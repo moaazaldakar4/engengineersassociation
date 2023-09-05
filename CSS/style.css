@@ -131,8 +131,8 @@ section{
             box-shadow: 0 0 0 1px #4fc3dc44,
             0 0 4px #0ef , 
             0 0 13px #0ef;
-            animation: animate 50s linear infinite;
-            animation-duration: calc(500s/var(--i));
+            animation: animate 40s linear infinite;
+            animation-duration: calc(400s/var(--i));
         }
         
         /* Additional responsive styles for even bubbles */
