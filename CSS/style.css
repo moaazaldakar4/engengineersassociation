@@ -123,16 +123,16 @@ section{
     @media (max-width: 768px) {
         .bubble {
             position: relative;
-            width: 4.5px;
-            height: 6px;
+            width: 1px;
+            height: 25px;
             background: #0ef;
             border-radius: 50%;
             margin: 0 1px;
             box-shadow: 0 0 0 1px #4fc3dc44,
             0 0 4px #0ef , 
             0 0 13px #0ef;
-            animation: animate 40s linear infinite;
-            animation-duration: calc(400s/var(--i));
+            animation: animate 50s linear infinite;
+            animation-duration: calc(500s/var(--i));
         }
         
         /* Additional responsive styles for even bubbles */
@@ -626,7 +626,97 @@ transform: scale(1.1);
 }
 
 
+.apply h2 {
+    margin-bottom: 4rem;
+}
+.apply-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2.5rem;
+    margin-bottom: 5rem;
+}
+.apply-box {
+    flex: 0 0 calc(75% - 1.5rem);
+}
+.apply-container .apply-box{
+    position: relative;
+    border-radius: 1rem;
+    box-shadow: 0 0 5rem var(--bg-color);
+    overflow: hidden;
+    display: flex;
+    
+}
+.apply-box img {
+    width: 100%;
+    transition: 0.8s ease;
+        
+}
+.apply-box:hover img{
+transform: scale(1.2);
+box-shadow: 0 0 3rem var(--bg-color);
+
+}
+.apply-box .apply-layer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg , rgba(0, 0, 0, 0), var(--bg-color)  );
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 4rem;
+    transform: translateX(100%);
+    transition: 0.8s ease;
+}
+.apply-box:hover .apply-layer{
+    transform: translateX(0);
+
+}
+
+.apply-layer h4{
+    font-size: 5rem;
+    margin-bottom: 2rem;
+}
+.apply-layer p {
+    font-size: 2rem;
+    font-weight: 5rem;
+    margin: 0.3rem 0 1rem;
+}
+.apply-layer a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 5rem;
+    height: 5rem;
+    background: #fff;
+    border-radius: 50%;
+}
+.apply-layer a i {
+    font-size: 2.5rem;
+    color:#000000;
+}
 /*breackpoints */
+@media screen and (max-width: 768px) {
+    .apply h2 {
+        margin-bottom: 10rem; /* Adjusted margin for extra small screens */
+    }
+
+    .apply-container {
+        gap: 1rem; /* Adjusted gap for extra small screens */
+        margin-bottom: 1rem; /* Adjusted margin for extra small screens */
+    }
+
+    .apply-box {
+        flex: 0 0 calc(100% - 1rem); /* Full width for extra small screens */
+        margin-bottom:0.5rem; /* Adjusted margin for extra small screens */
+    }
+}
 @media (max-width : 1200px){
     html{
         font-size: 55%;
@@ -760,10 +850,10 @@ font-weight: 700;
 }
 @media (max-width: 768px) {
     .nav-pic a img {
-        width: 85px;
-        height: 85px;
+        width: 90px;
+        height: 90px;
         background-size: 130% 130%;
-        margin-right: 1rem;
+        margin-right: 0rem;
     }
 }
 
