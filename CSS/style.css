@@ -744,25 +744,26 @@ box-shadow: 0 0 3rem var(--bg-color);
     }
     .navbar {
         position: absolute;
-        top: 100%;
-        left: 0;
+        top: 60%;
+        left: 0%;
         width: 100%;
         padding: 1rem 3%;
-        background: #000000ac;
-        backdrop-filter:blur(10px) ;
-        border-top: 1rem solid rgba(0, 0, 0, 0.271);
-        box-shadow: rgba(0, 0, 0, 0);
+        background: linear-gradient(rgba(0, 238, 255, 0.803), #c4b0ffd2);
+        box-shadow: rgb(1, 1, 1);
         display: none;
-    }
-    .navbar.active{
-        display: block;
+        border-radius: 0px 0px 50px 50px;
     }
 
     
+    .navbar.active{
+        display: block;
+    }
     .navbar a {
         display: block;
         font-size: 2rem;
         margin: 3rem 0;
+        color: #000;
+
     }
     .home{
         flex-direction: column;
