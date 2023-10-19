@@ -195,10 +195,11 @@ color: transparent;
 
 .home-image img {
     animation: floatImage 4s ease-in-out infinite;
-    width: 150px;
+    width: 600px;
     /* Add the following line to place the image on the left */
-    margin-right: 20px;
-    margin-left: -500rem;
+
+    margin-top: 20px;
+
 
 
 }
@@ -780,7 +781,16 @@ box-shadow: 0 0 3rem var(--bg-color);
 
     }
 
-
+    .home-image img {
+        animation: floatImage 4s ease-in-out infinite;
+        width: 300px;
+        /* Add the following line to place the image on the left */
+    
+        margin-top: 20px;
+    
+    
+    
+    }
     .portfolio h2 {
         margin-bottom: 1rem;
     }
